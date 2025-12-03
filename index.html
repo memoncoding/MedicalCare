@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare Central - Your Health, Our Priority</title>
+    <link rel="shortcut icon" href="img/icon.png" type="imageX/icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mainheader{
+    border: 1px solid black;
+    background-color: #000;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #2f3e46;
+    justify-content: space-around;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.5);
+    z-index: +2000;
+}
+.headerleft{
+}
+.headerleft :hover {
+    background: #fff;
+    color: #2f3e46;
+}
+.menubtn{
+    border: 2px solid #fff;
+    padding: 10px 15px;
+    background-color: #2f3e46;
+    color: #fff;
+    font-size: medium;
+}
+.headercenter > i{
+    color: #00A896;
+    font-size: 200%;
+    animation: movebox 3s ease-in-out 0.5s infinite alternate forwards;
+}
+@keyframes movebox{
+0% {transform: scale3d(0.9,0.9,0.9);}
+100% {transform: scale3d(1.2,1.2,1.2);}
+}
+.headercenter > strong{
+    color: #00A896;
+    font-size: 200%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+.headercenter > span{
+    color: #fff;
+    font-size: 200%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+.headerright>a{
+    border:1px solid #00A896;
+    border-radius: 50px;
+    font-size: 130%;
+    width: 200px;
+    height: 100px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #02c39a;
+    text-decoration: none;
+    padding: 15px 25px;
+    transition:all 0.3s ease-in-out;
+}
+.headerright>a:hover{
+    transform: translateY(-5px);
+    background-color: #00A896;
+}
+.sec1{
+    border: 1px solid #3b4950;
+    width: 100%;
+    height: 500px;
+    background-color: #3b4950;
+    border-radius: 0px 0px 0px 150px;
+}
+.card{
+    margin: 10% 0% 0% 45%;
+    width: 50%;
+}
+.card > .logo1{
+    color: #fff;
+    font-size: 60px;
+}
+.card > .logo2{
+    color: #02c39a;
+    font-size: 60px;
+}
+.card > p{
+    color: #fff;
+    font-size: 25px;
+    margin-top: 5%;
+    margin-bottom: 7%;
+}
+.card > .booking{
+    border: 1px solid #02c39a;
+    color: #fff;
+    background-color: #02c39a;
+    width: 80%;
+    height: 50% ;
+    padding: 18px 25px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+.card > .booking:hover{
+    background-color: #00A896;
+    border: #00A896;
+    transform: translateY(-10px);
+}
+.card > .contact{
+    border: 5px solid #fff;
+    color: #fff;
+    width: 80%;
+    height: 50%;
+    padding: 14px 20px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+}
+.card > .contact:hover{
+    color: #00A896;
+    border: 5px solid #02c39a;
+}
+.sec2{
+    border:1px solid #2f3e46;
+    width: 90%;
+    background-color: #2f3e46;
+    margin-left: 25%;
+    border-radius: 0px 0px 20px 20px;
+    position: relative;
+    z-index: +1000;
+}
+.card2{
+    /* border: 1px solid #2f3e46; */
+    box-sizing: border-box;
+    /* width: 80%; */
+    /* height: 30%; */
+    margin-top: 30px;
+    margin-left: 0%;
+    /* background-color: #2f3e46; */
+    /* border-radius: 10px; */
+    position: relative;
+}
+.heroimage{
+    display: flex;
+    height: 300px;
+    bottom: 5%;
+    position: absolute;
+}
+.herocontent > h3{
+    margin: 0px 0px 0px 250px;
+    font-size: 25px;
+    color: #00A896;
+}
+.herocontent > p{
+    display: flex;
+    margin: 0px 0px 0px 250px;
+    color: #fff;
+    font-size: 17px;
+}
+.herocontent > .talk{
+    margin: 0px 0px 0px 300px;
+    border: 1px solid #02c39a;
+    background-color: #02c39a;
+    border-radius: 60px;
+    color: #fff;
+    font-weight: 800;
+    text-decoration: none;
+    padding: 15px 25px;
+}
+
+.sec3 > h1{
+    text-align: center;
+    margin-top: 10%;
+    font-size: 45px;
+    font-weight: 800;
+
+}
+.specialtylist{
+    display: grid;
+    align-content: center;
+    align-self: center;
+    align-items: center;
+}
+.specialitem{
+    display: inline-block;
+    border-radius: 15px;
+    border: 1px solid #b5b3b3;
+    background-color: #fcfafa;
+    width: 18%;
+    height: 160px;
+    text-align: center;
+    margin-left: 4%;
+    margin-top: 6%;
+    padding: 10px;
+    cursor: pointer;
+    transition:all 0.3s ease-in-out;
+}
+.specialitem:hover{
+    transform: translateY(-10px);
+    box-shadow: 3px 3px 3px 3px rgba(66, 65, 65, 0.1) ;
+}
+.specialitem > i{
+    color: #02c39a;
+    font-size: 40px;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+.specialitem > i:hover{
+    color: #00A896;
+}
+.specialitem > h3{
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 5%;
+}
+.sec4 > h1{
+    color: #00A896;
+    text-align: center;
+    margin-top: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.docspecialitylist{
+    display: flex;
+    margin-top: 5%;
+    justify-content: space-evenly;
+}
+.doctorcrd{
+    display: inline;
+    border: 1px solid #ebeaea;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin-left: 5%;
+    width: 25%;
+    height: 330px;
+    padding: 10PX;
+    text-align: center;
+    box-shadow: -2px +2px 2px 2px rgba(66, 65, 65, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+.doctorcrd:hover{
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+.docimg{
+    width: 250px;
+}
+.docimgs{
+    width: 195px;
+}
+.docname{
+    margin-top: 3%;
+}
+.docspeciality{
+    color: #00A896;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    font-size: 10px;
+    margin-top: 3%;
+}
+.bookappointment{
+    margin-top: 5%;
+    margin-left: 35%;
+    text-align: center;
+    border: 1px solid #02c39a;
+    background-color: #02c39a;
+    border-radius: 20px;
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+}
+.bookappointment:hover{
+    transform: translateY(-5px);
+    background-color: #00A896;
+    border: 1px solid #00A896;
+    cursor: pointer;
+}
+.bookappointment > a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+.sec5{
+    /* border: 1px solid red; */
+    background-color: #faf8f8;
+    width: 100%;
+    height: 600px;
+    box-sizing: border-box;
+}
+.sec5 > h1{
+    font-size:   40px;
+    text-align: center;
+    margin: 10% 0% 5% 0%;
+}
+.ourservices{
+    display: moz-grid-line;
+}
+.servicecard{
+    display: inline-block;
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    border-radius: 15px;
+    width: 30%;
+    margin: 15px 0px 15px 25px;
+    height: 170px;
+    padding: 10px 5px 10px 5px;
+    box-sizing: border-box;
+    text-align: center;
+    transition:all 0.3s ease-in-out;
+}
+.servicecard:hover{
+    transform: translateY(-8px);
+    border-bottom: 5px solid #00A896;
+    cursor: pointer;
+}
+.servicecard > i{
+    color: #02c39a;
+    font-size: 40px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.servicecard > h3{
+    margin-bottom: 5%;
+    color: #32393d;
+}
+.servicecard > p{
+    color: #32393d;
+}
+.sec6{ 
+    border: 1px solid #00A896;
+    background-color: #00A896;
+    width: 100%;
+    height: 150px;
+    /* display: flex; */
+}
+.startgrid{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.startitem{
+    display: flex;
+    margin: 5% 5% 0% 0%;
+}
+.starticon{
+    display: flex;
+    color: #ffffff;
+    font-size: 50px;
+    margin-top: 6%;
+    
+}
+.startinfo{
+    border: 1px solid #00A896;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    /* display: inline-block; */
+}
+.number{
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+}
+.label{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.sec7{
+    border: 1px solid #2f3e46;
+    background-color: #2f3e46;
+    width: 100%;
+    height: 300px;
+}
+.footer{
+    display: flex;
+    margin: 5% 1% 1% 2%;
+}
+.medicalcenter{
+    /* border: 1px solid #ffffff; */
+    width: 25%;
+}
+.medicalcenter > h3{
+    margin-bottom: 5%;
+    color: #02c39a;
+    font-size: 20px;
+}
+.medicalcenter > p{
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+}
+.quiklink{
+    /* border: 1px solid #fff; */
+    width: 20%;
+    margin-left: 2%;
+}
+.quiklink > h3{
+    margin-bottom: 5%;
+    color: #00A896;
+    font-size: 20px;
+}
+.quiklink > a{
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    transition:all 0.2s ease-in-out;
+}
+.quiklink > a:hover{
+    transform:translateX(+10px);
+    color: #00A896;
+    cursor: pointer;
+}
+.location{
+    /* border: 1px solid #fff; */
+    width: 30%;
+    margin-left: 2%;
+}
+.location > h3{
+    margin-bottom: 5%;
+    color: #00A896;
+    font-size: 20px;
+}
+.location > p{
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+}
+.sociallink{
+    /* border: 1px solid #fff; */
+    width: 20%;
+    margin-left: 2%;
+}
+.sociallink > h3{
+    margin-bottom: 5%;
+    color: #00A896;
+    font-size: 20px;
+}
+.sociallink > a,i{
+    display: block;
+    margin-bottom: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+    text-decoration: none;
+    transition:all 0.2s ease-in-out;    
+}
+.sociallink > a,i:hover{
+    transform: translateX(+5px);
+    color: #00A896;
+}
+.sociallink > span{
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    transition: all 0.2s ease-in-out;
+}
+.sociallink > span:hover{
+    color: #00A896;
+}
+
+
+    </style>
+</head>
+<body>
+    <header class="mainheader">
+        <div class="headerleft">
+            <button class="menubtn">
+            <i class="fa-solid fa-list"></i>
+            <span class="menutext">Menu</span>
+            </button>
+        </div>
+        <div class="headercenter">
+            <i class="fas fa-plus-square" aria-hidden="true"></i>
+            <span class="medicarelogo">Medicare</span>
+            <strong>Center</strong>
+        </div>
+        <div class="headerright">
+            <a href="#">Book Appoinment</a>
+        </div>
+    </header>
+    <section class="sec1">
+        <div class="card">
+            <h1 class="logo1">Best Caring,</h1>
+            <h1 class="logo2">Better Healthcare</h1>
+            <p>Experience world-class medical facilities and compassionate care 24/7.Our renowned surgeons use cutting-edge technology for minimal recovery time.</p>
+            <a href="#" class="booking">BOOK AN APPOINMENT</a>
+            <a href="#" class="contact">CONTACT US</a>
+        </div>
+    </section>        
+    <section class="sec2">
+        <div class="card2">
+            <div class="heroimage">    
+                <img src="img/doc 1.png" alt="">
+            </div>    
+            <div class="herocontent">    
+               <h3>Your Healt is Our Lifeline.</h3>
+               <p>Meet our expert doctors dedicated to personalized and effective treatment.</p>
+               <a class="talk">TALK TO A SPECIALIST</a>
+            </div>
+        </div>
+    </section>  
+    <section class="sec3">
+        <h1>Our Special Doctor Specialties</h1>
+        <div class="Specialtylist">
+            <div class="specialitem">
+                <i class="fas fa-brain" aria-hidden="true"></i>
+                <h3>Neurology</h3>
+                <p>Expert care for brain and nervous system disorders.</p>
+            </div>
+            <div class="specialitem">
+                <i class="fas fa-bone" aria-hidden="true"></i>
+                <h3>Orthopedics</h3>
+                <p>Joint, bone, and muscle repair and rehabilitation.</p>
+            </div>
+            <div class="specialitem">
+                <i class="fas fa-heart" aria-hidden="true"></i>
+                <h3>Cardiology</h3>
+                <p>Leading heart specialists and diagnostic services.</p>
+            </div>
+            <div class="specialitem">
+                <i class="fas fa-baby" aria-hidden="true"></i>
+                <h3>Pediatrics</h3>
+                <p>Compassionate care for children and adolescents.</p>
+            </div>
+        </div>
+    </section>
+    <section class="sec4">
+        <h1>Our Top Rated Doctors</h1>
+        <div class="docspecialitylist">
+            <div class="doctorcrd">
+                <img src="img/doc2.png" alt="" class="docimg">
+                <h3 class="docname">Dr. Alan Walker</h3>
+                <h6 class="docspeciality">Chef Cardiologist</h6>
+            </div>
+            <div class="doctorcrd">
+                <img src="img/doc 1.png" alt="" class="docimg">
+                <h3 class="docname">Dr. Tom Chen</h3>
+                <h6 class="docspeciality">Pediatric Specialist</h6>
+            </div>
+            <div class="doctorcrd">
+                <img src="img/doc3.png" alt="" class="docimgs">
+                <h3 class="docname">Dr. Ben Carter</h3>
+                <h6 class="docspeciality">Head Surgeon</h6>
+            </div>
+        </div>
+        <button class="bookappointment"><a href="#">Book An Appoinment Today</a></button>
+    </section>
+    <section class="sec5">
+        <h1 class="service-head">Our Comprehensive Services</h1>
+        <div class="ourservices">
+            <div class="servicecard">
+                <i class="fas fa-ambulance" aria-hidden="true"></i>
+                <h3>Emergency Services</h3>
+                <p>24/7 fully equipped emergency and trauma care unit.</p>
+            </div>
+            <div class="servicecard">
+                <i class="fas fa-x-ray" aria-hidden="true"></i>
+                <h3>Advanced Diagnostics</h3>
+                <p>MRI, CT scans, X-rays, and comprehensive lab testing.</p>
+            </div>
+            <div class="servicecard">
+                <i class="fas fa-clinic-medical" aria-hidden="true"></i>
+                <h3>Inpatient & Outpatient</h3>
+                <p>Comfortable hospital rooms and efficient outpatient treatment.</p>
+            </div>
+            <div class="servicecard">
+                <i class="fas fa-procedures" aria-hidden="true"></i>
+                <h3>Rehabilitation</h3>
+                <p>Physical therapy and specialized recovery programs.</p>
+            </div>
+            <div class="servicecard">
+                <i class="fas fa-user-md" aria-hidden="true"></i>
+                <h3>Primary Care</h3>
+                <p>Routine check-ups, preventative care, and general consultation.</p>
+            </div>
+            <div class="servicecard">
+                <i class="fas fa-syringe" aria-hidden="true"></i>
+                <h3>Vaccination Center</h3>
+                <p>Providing essential vaccinations for all age groups.</p>
+            </div>
+        </div>
+    </section>
+    <section class="sec6">
+        <div class="startgrid">
+            <div class="startitem">
+                <div class="starticon">
+                    <i class="fas fa-user-injured" aria-hidden="true"></i>
+                </div>
+                <div class="startinfo">
+                    <span class="number">1500+</span>
+                    <span class="label">Total Patients Served</span>
+                </div>
+            </div>
+            <div class="startitem">
+                <div class="starticon">
+                    <i class="fas fa-stethoscope" aria-hidden="true"></i>
+                </div>
+                <div class="startinfo">
+                    <span class="number">75</span>
+                    <span class="label">Expert Doctors</span>
+                </div>
+            </div>
+            <div class="startitem">
+                <div class="starticon">
+                    <i class="fas fa-bed" aria-hidden="true"></i>
+                </div>
+                <div class="startinfo">
+                    <span class="number">200</span>
+                    <span class="label">Total Rooms</span>
+                </div>
+            </div>
+            <div class="startitem">
+                <div class="starticon">
+                    <i class="fas fa-award" aria-hidden="true"></i>
+                </div>
+                <div class="startinfo">
+                    <span class="number">10+</span>
+                    <span class="label">Years of Service</span>
+                </div>
+            </div>
+        </div> 
+    </section>
+    <section class="sec7">
+        <div class="footer">
+            <div class="medicalcenter">
+                <h3>Medicare Central</h3>
+                <p>Committed to providing the highest standards of healthcare excellence and compassion. Your trusted partner in health.</p>
+            </div>
+            <div class="quiklink">
+                <h3>Quick Links</h3>
+                <a href="#">About us</a>
+                <br>
+                <br>
+                <a href="#">Contact</a>
+                <br>
+                <br>
+                <a href="#">Services</a>
+                <br>
+                <br>
+                <a href="#">Meet The Doctor</a>
+            </div>
+            <div class="location">
+                <h3>Contact & Location</h3>
+                <p>123 health Ave, Wellness City, 90210</p>
+                <br>
+                <p>(555) 123-4567</p>
+                <br>
+                <p>info@medicarecentral.com</p>
+            </div>
+            <div class="sociallink">
+                <h3>Social Links</h3>
+                <a href="#">
+                    <i class="fab fa-facebook-f" aria-hidden="true"><span>Facebook</span></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-twitter" aria-hidden="true"><span>Twitter</span></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-linkedin-in" aria-hidden="true"><span>Linkdin</span></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-instagram" aria-hidden="true"><span>Instagram</span></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+      
+
+
+
+
+
+
+
+
+</body>
+</html>
